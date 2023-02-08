@@ -35,4 +35,4 @@ st.title('Deprem - Yardım istenilen konumlar')
 
 a = open("index.html","r",encoding="UTF-8").read()
 
-components.html(a,height= 750,scrolling=False)
+components.html(a,height= 500,scrolling=False)
