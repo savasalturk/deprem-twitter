@@ -27,7 +27,7 @@ m.save("index.html")
 
 
 st.set_page_config(layout="wide")
-st.title('Twitter - Deprem')
+st.title('Deprem - Yardım istenilen konumlar')
 
 
 
