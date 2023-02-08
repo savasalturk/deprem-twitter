@@ -5,6 +5,13 @@ from folium.plugins import MarkerCluster
 import json
 
 m = folium.Map([37.265763040011514, 36.610105733926865],zoom_start = 8)
+folium.TileLayer(
+        tiles = 'https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}',
+        attr = 'Google',
+        name = 'Google Satellite',
+        overlay = True,
+        control = True
+    ).add_to(m)
 marker_cluster = MarkerCluster().add_to(m)
 f = open("data/v6.geojson","r",encoding="utf-8").read()
 js = json.loads(f)
