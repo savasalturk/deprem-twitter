@@ -12,7 +12,7 @@ folium.TileLayer(
         overlay = True,
         control = True
     ).add_to(m)
-marker_cluster = MarkerCluster().add_to(m)
+marker_cluster = MarkerCluster(control =False).add_to(m)
 f = open("data/v6.geojson","r",encoding="utf-8").read()
 js = json.loads(f)
 #fields = ['1', 'sehir', 'ilce', 'mah', 'Adres', 'Apartman Adı', 'Sokak/Cadde/Bulvar', 'Dış Kapı/Blok', 'İç Kapı', 'Kat', 'isim', 'tel', 'kaynak', 'tel.1', 'adres_birlesik', 'konum', 'x', 'y']
