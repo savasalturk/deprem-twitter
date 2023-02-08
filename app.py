@@ -29,6 +29,7 @@ for i in js["features"]:
     marker_cluster.add_child(marker)
 
 #m.save("index.html")
+folium.LayerControl().add_to(m)
 m.fit_bounds(m.get_bounds())
 
 
