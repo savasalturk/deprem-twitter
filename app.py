@@ -25,7 +25,7 @@ for i in js["features"]:
         ht.append(html)
     iframe = folium.IFrame("".join(ht))
     popup = folium.Popup(iframe, min_width=500, max_width=500)
-    marker  = folium.Marker([i["geometry"]["coordinates"][1],i["geometry"]["coordinates"][0]],popup=popup)
+    marker  = folium.Marker([i["geometry"]["coordinates"][1],i["geometry"]["coordinates"][0]],popup=popup,icon=folium.Icon(color="red", icon="info-sign"))
     marker_cluster.add_child(marker)
 
 #m.save("index.html")
