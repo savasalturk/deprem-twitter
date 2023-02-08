@@ -35,7 +35,7 @@ m.fit_bounds(m.get_bounds())
 
 st.set_page_config(layout="wide")
 #st.title('Deprem - Yardım istenilen konumlar')
-st.markdown("""<h1> Deprem - Yardım İstenilen Konumlar </h1>""")
+st.markdown("""<h1> Deprem - Yardım İstenilen Konumlar </h1>""",unsafe_allow_html=True)
 
 
 
