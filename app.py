@@ -18,7 +18,7 @@ for i in js["features"]:
         html = """<br> <strong>{} : </strong> {}</br>""".format(j[0],j[1])
         ht.append(html)
     iframe = folium.IFrame("".join(ht))
-    popup = folium.Popup(iframe, min_width=500, max_width=3500)
+    popup = folium.Popup(iframe, min_width=300, max_width=500)
     folium.Marker(i["geometry"]["coordinates"],popup=popup).add_to(marker_cluster)
 m.save("index.html")
 
