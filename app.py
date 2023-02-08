@@ -8,9 +8,18 @@ m = folium.Map([37.265763040011514, 36.610105733926865],zoom_start = 8)
 marker_cluster = MarkerCluster().add_to(m)
 f = open("data/v6.geojson","r",encoding="utf-8").read()
 js = json.loads(f)
-fields = ['1', 'sehir', 'ilce', 'mah', 'Adres', 'Apartman Adı', 'Sokak/Cadde/Bulvar', 'Dış Kapı/Blok', 'İç Kapı', 'Kat', 'isim', 'tel', 'kaynak', 'tel.1', 'adres_birlesik', 'konum', 'x', 'y']
-folium.GeoJson(data=js,popup=folium.GeoJsonPopup(fields=fields)).add_to(marker_cluster)
-
+#fields = ['1', 'sehir', 'ilce', 'mah', 'Adres', 'Apartman Adı', 'Sokak/Cadde/Bulvar', 'Dış Kapı/Blok', 'İç Kapı', 'Kat', 'isim', 'tel', 'kaynak', 'tel.1', 'adres_birlesik', 'konum', 'x', 'y']
+#folium.GeoJson(data=js,popup=folium.GeoJsonPopup(fields=fields)).add_to(marker_cluster)
+for i in js["features"]:
+    ht = []
+    
+    for j in list(i["properties"].items()):
+        html = """<br> <strong>{} : </strong> {}</br>""".format(j[0],j[1])
+        ht.append(html)
+    iframe = folium.IFrame("".join(ht))
+    popup = folium.Popup(iframe, min_width=500, max_width=500)
+    marker  = folium.Marker([i["geometry"]["coordinates"][1],i["geometry"]["coordinates"][0]],popup=popup)
+    marker_cluster.add_child(marker)
 
 m.save("index.html")
 
