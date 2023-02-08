@@ -4,7 +4,7 @@ import folium
 from folium.plugins import MarkerCluster
 import json
 
-m = folium.Map([37.265763040011514, 36.610105733926865],zoom_start = 8)
+m = folium.Map([37.265763040011514, 36.610105733926865],zoom_start = 10)
 folium.TileLayer(
         tiles = 'https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}',
         attr = 'Google',
