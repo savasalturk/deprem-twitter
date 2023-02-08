@@ -29,6 +29,11 @@ for i in js["features"]:
     marker_cluster.add_child(marker)
 
 #m.save("index.html")
+folium.plugins.Fullscreen(position='topright', # ‘topleft’, default=‘topright’, ‘bottomleft’, ‘bottomright’ 
+                   title='FULL SCREEN ON', 
+                   title_cancel='FULL SCREEN OFF',
+                   force_separate_button=True
+                  ).add_to(m)
 folium.LayerControl().add_to(m)
 m.fit_bounds(m.get_bounds())
 
