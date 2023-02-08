@@ -21,7 +21,7 @@ for i in js["features"]:
     marker  = folium.Marker([i["geometry"]["coordinates"][1],i["geometry"]["coordinates"][0]],popup=popup)
     marker_cluster.add_child(marker)
 
-m.save("index.html")
+#m.save("index.html")
 
 
 
@@ -33,6 +33,6 @@ st.title('Deprem - Yardım istenilen konumlar')
 
 
 
-a = open("index.html","r",encoding="UTF-8").read()
-
+#a = open("index.html","r",encoding="UTF-8").read()
+a = m._repr_html_()
 components.html(a,height= 500,scrolling=False)
