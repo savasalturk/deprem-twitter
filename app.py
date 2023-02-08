@@ -1,6 +1,7 @@
 import streamlit as st
 import streamlit.components.v1 as components
 import folium
+from folium.plugins import MarkerCluster
 import json
 
 m = folium.Map([37.265763040011514, 36.610105733926865],zoom_start = 8)
