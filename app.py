@@ -42,4 +42,4 @@ st.markdown("""<h3> Deprem - Yardım İstenilen Konumlar </h3>""",unsafe_allow_h
 
 #a = open("index.html","r",encoding="UTF-8").read()
 a = m._repr_html_()
-components.html(a,height= 500,scrolling=False)
+components.html(a,height= 600,scrolling=False)
