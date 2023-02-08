@@ -29,7 +29,7 @@ for i in js["features"]:
     marker_cluster.add_child(marker)
 
 #m.save("index.html")
-
+m.fit_bounds(m.get_bounds())
 
 
 
